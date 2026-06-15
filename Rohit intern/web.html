@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineYapp — Movie Reviews</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">▶</span>
+        <span class="logo-text">CineYapp</span>
+      </div>
+      <p class="tagline">Honest reviews. No spoilers.</p>
+    </div>
+  </header>
+
+  <!-- Controls -->
+  <section class="controls">
+    <div class="controls-inner">
+      <!-- Search -->
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search movies…"
+        />
+      </div>
+
+      <!-- Genre Filter -->
+      <div class="filter-wrap">
+        <span class="filter-label">Genre</span>
+        <div class="genre-buttons" id="genreButtons">
+          <button class="genre-btn active" data-genre="all">All</button>
+          <button class="genre-btn" data-genre="Action">Action</button>
+          <button class="genre-btn" data-genre="Drama">Drama</button>
+          <button class="genre-btn" data-genre="Sci-Fi">Sci-Fi</button>
+          <button class="genre-btn" data-genre="Horror">Horror</button>
+          <button class="genre-btn" data-genre="Comedy">Comedy</button>
+          <button class="genre-btn" data-genre="Thriller">Thriller</button>
+          <button class="genre-btn" data-genre="Animation">Animation</button>
+        </div>
+      </div>
+
+      <!-- Sort -->
+      <div class="sort-wrap">
+        <label class="filter-label" for="sortSelect">Sort by</label>
+        <select id="sortSelect" class="sort-select">
+          <option value="default">Default</option>
+          <option value="rating-desc">Rating ↓</option>
+          <option value="rating-asc">Rating ↑</option>
+          <option value="year-desc">Newest</option>
+          <option value="year-asc">Oldest</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results count -->
+  <div class="results-bar">
+    <span id="resultsCount">12 movies</span>
+  </div>
+
+  <!-- Movie Grid -->
+  <main class="movie-grid" id="movieGrid">
+    <!-- Cards injected by JS -->
+  </main>
+
+  <!-- Empty state -->
+  <div class="empty-state" id="emptyState" style="display:none;">
+    <span class="empty-icon">🎬</span>
+    <p>No movies match your search.<br/>Try a different genre or keyword.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2025 CineVault &mdash; Built with passion for cinema</p>
+  </footer>
+
+  <script src="web.js"></script>
+</body>
+</html>
